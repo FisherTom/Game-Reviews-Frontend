@@ -33,5 +33,3 @@ export const patchReviewVotes = (review_id, inc) => {
     return res.data.review;
   });
 };
-
-///api/reviews/:review_id/comments
