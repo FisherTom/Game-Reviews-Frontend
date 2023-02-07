@@ -3,6 +3,7 @@ import CommentsBox from './CommentsBox'
 import {useParams}  from 'react-router-dom'
 import { getReviewById } from '../utils/api'
 import VoteWidget from './VoteWidget'
+import AddComment from './AddComment'
 
 function Review() {
 
@@ -26,6 +27,7 @@ function Review() {
           <p>Author: {review.owner}</p>
           <VoteWidget review={review} setReview={setReview}/>
           <CommentsBox review={review}/>
+          <AddComment review_id={review.review_id}/>
       </section>
     )
   }else{

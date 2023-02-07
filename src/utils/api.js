@@ -33,3 +33,17 @@ export const patchReviewVotes = (review_id, inc) => {
     return res.data.review;
   });
 };
+
+export const getAllUsers = () => {
+  return api.get("/users").then((res) => {
+    return res.data.users;
+  });
+};
+
+export const postComment = (review_id, username, body) => {
+  return api
+    .post(`/reviews/${review_id}/comments`, { username, body })
+    .then((res) => {
+      return res.data.comment;
+    });
+};
