@@ -41,7 +41,6 @@ export const getAllUsers = () => {
 };
 
 export const postComment = (review_id, username, body) => {
-  console.log("🚀 ~ file: api.js:47 ~ { username, body }", { username, body });
   return api
     .post(`/reviews/${review_id}/comments`, { username, body })
     .then((res) => {
