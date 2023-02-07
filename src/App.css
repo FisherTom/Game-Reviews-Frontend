@@ -1,3 +1,12 @@
+:root{
+  --one: #f47068ff;
+  --two: #ffb3aeff;
+  --three: #fff4f1ff;
+  --four: #1697a6ff;
+  --five: #0e606bff;
+  --six: #ffc24bff;
+  }
+
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -19,43 +28,166 @@ img {
 }
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#app-header{
+  
+}
+#app-header>h1{
+  font-family: 'Cinzel', serif;
+  font-weight: 900;
+  font-size: 3em;
+  color: ghostwhite;
+
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 3px 3px #000;
+}
+#home-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#landing-splash{
+  background-color:rgb(0, 0, 0,0.5) ;
+  padding: 2em;
+  width: 100vw;
+  text-align: center;
+  margin-bottom: 1em;
+}
+#landing-splash>p{
+  width: 70vw;
+  margin: auto;
+  
+  font-family: 'Cinzel', serif;
+  font-size: 1.2em;
+  font-weight: 300;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 20px black;
+}
+#landing-img{
+  
+ width: 400px;
 }
 #nav-bar{
-  background-color: rgb(79, 86, 86);
+  width: 100vw;
   height: 3em;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .nav-link{
-  color: aliceblue;
+  padding: 0.5em;
+  border-radius: 1em;
+  background-color: var(--five);
+  color: white;
   text-decoration: none;
 }
-#review-list{
 
+
+#review-list{
+display: flex;
+flex-direction: column;
+gap: 1em;
 }
 .review-card{
+
+  width: 70vw;
+  min-width: 350px;
   padding: 1em;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   gap: 1em;
-  border: 10px solid black;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 1em;
+}
+.review-card-img-box{
+
 }
 .review-card-img{
   height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 5px 5px 20px black;
+
+}
+.review-owner-img{
+  position: relative;
+  top: 0px;
+  left: -40px;
+  height: 3em;
+  width: 3em;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid black;
+  background-color: white;
+  box-shadow: 5px 5px 20px black;
 }
 .review-info{
   display: flex;
   flex-direction: column;
   gap: 1em;
   text-align: left;
-  max-width: 70vw;
 }
-.full-review{
+.review-info>h3{
+  font-family: 'Cinzel', serif;
+  font-weight: 500;
+  text-decoration: underline;
+ 
+}
+#full-review{
+  width: 70vw;
+  min-width: 360px;
   padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(0, 0, 0,0.7);
 }
-.full-review>*{
+#full-review>*{
   margin: 0.5em;
+  font-family: 'Cinzel', serif;
+  color: white;
 }
+
+#comments-box{
+}
+.comments-box-list{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  border-radius: 2em;
+  border: 1px solid black;
+  background-color: rgb(255, 255, 255, 0.6);
+  padding: 1em;
+}
+.comment-card{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+  background-color: rgb(0, 0, 0);
+  border: 1px solid black;
+  padding: 0.5em;
+  border-radius: 2em;
+  position: relative;
+}
+.comment-card-img{
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  left: -10px;
+  top: -8px;
+  border-radius: 3em;
+  border: 5px solid black;
+
+}
+.comment-card-body{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
 
