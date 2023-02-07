@@ -40,7 +40,6 @@ img {
   font-weight: 900;
   font-size: 3em;
   color: ghostwhite;
-
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 3px 3px #000;
 }
 #home-div{
@@ -83,15 +82,12 @@ img {
   color: white;
   text-decoration: none;
 }
-
-
 #review-list{
 display: flex;
 flex-direction: column;
 gap: 1em;
 }
 .review-card{
-
   width: 70vw;
   min-width: 350px;
   padding: 1em;
@@ -104,7 +100,6 @@ gap: 1em;
   border-radius: 1em;
 }
 .review-card-img-box{
-
 }
 .review-card-img{
   height: 150px;
@@ -112,7 +107,6 @@ gap: 1em;
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 5px 5px 20px black;
-
 }
 .review-owner-img{
   position: relative;
@@ -131,16 +125,11 @@ gap: 1em;
   flex-direction: column;
   gap: 1em;
   text-align: left;
-  
 }
-.review-card-title{
-  flex-wrap: wrap;
-  margin: auto;
+.review-info>h3{
   font-family: 'Cinzel', serif;
   font-weight: 500;
   text-decoration: underline;
-  
- 
 }
 #full-review{
   width: 70vw;
@@ -194,6 +183,7 @@ gap: 1em;
   padding-left: 30px;
   padding-right: 30px;
 }
+
 .vote-widget{
   display: flex;
   flex-direction: column;
@@ -218,5 +208,4 @@ gap: 1em;
   box-shadow: 0 0  5px inset;
   background-color: white;
 }
-
 
