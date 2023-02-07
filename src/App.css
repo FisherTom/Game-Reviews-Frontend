@@ -131,11 +131,15 @@ gap: 1em;
   flex-direction: column;
   gap: 1em;
   text-align: left;
+  
 }
-.review-info>h3{
+.review-card-title{
+  flex-wrap: wrap;
+  margin: auto;
   font-family: 'Cinzel', serif;
   font-weight: 500;
   text-decoration: underline;
+  
  
 }
 #full-review{
