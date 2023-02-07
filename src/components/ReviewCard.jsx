@@ -1,16 +1,24 @@
-import React from 'react'
+import React ,{useState, useEffect}from 'react'
 import { Link } from 'react-router-dom'
-
+import { getUserbyUsername } from '../utils/api'
 function ReviewCard({review}) {
 
+  const [ownerImg, setOwnerImg] = useState('')
+
+  useEffect(() => {
+   getUserbyUsername(review.owner).then((user) => {
+       setOwnerImg(user.avatar_url)
+   })
+  }, [review.owner])
   
     return (
       <li className='review-card'>
-      <img className='review-card-img' src={review.review_img_url} alt={"picture for review "+ review.title }></img>
+        <div className='review-card-img-box'>
+          <img className='review-card-img' src={review.review_img_url} alt={"picture for review "+ review.title }></img>
+          <img className='review-owner-img' src={ownerImg} alt="" />
+        </div>
       <section className='review-info'>
         <h3 className='review-card-title'>{review.title}</h3>
-        <h4 className='review-card-category'>Category: {review.category}</h4>
-        <h4 className='review-card-votes'>Votes: {review.votes}</h4>
         <Link to={`/reviews/${review.review_id}`} className='review-link'>Full Review</Link>
       </section>
     </li>

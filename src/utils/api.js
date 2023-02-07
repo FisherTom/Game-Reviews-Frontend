@@ -10,8 +10,22 @@ export const getAllReviews = () => {
   });
 };
 
-export const getReviewById = (id) => {
-  return api.get(`/reviews/${id}`).then((res) => {
+export const getReviewById = (review_id) => {
+  return api.get(`/reviews/${review_id}`).then((res) => {
     return res.data.review;
   });
 };
+
+export const getReviewComments = (review_id) => {
+  return api.get(`/reviews/${review_id}/comments`).then((res) => {
+    return res.data.comments;
+  });
+};
+
+export const getUserbyUsername = (username) => {
+  return api.get(`/users/${username}`).then((res) => {
+    return res.data.user;
+  });
+};
+
+///api/reviews/:review_id/comments
