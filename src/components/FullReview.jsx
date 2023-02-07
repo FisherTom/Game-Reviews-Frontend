@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import CommentsBox from './CommentsBox'
 import {useParams}  from 'react-router-dom'
 import { getReviewById } from '../utils/api'
+import VoteWidget from './VoteWidget'
 
 function Review() {
 
@@ -23,7 +24,7 @@ function Review() {
           <img className='full-review-picture' src={review.review_img_url} alt={"picture for review "+ review.title } />
           <p className='full-review-body'>{review.review_body}</p>
           <p>Author: {review.owner}</p>
-          <h3>Votes: {review.votes}</h3>
+          <VoteWidget review={review} setReview={setReview}/>
           <CommentsBox review={review}/>
       </section>
     )

@@ -28,4 +28,8 @@ export const getUserbyUsername = (username) => {
   });
 };
 
-///api/reviews/:review_id/comments
+export const patchReviewVotes = (review_id, inc) => {
+  return api.patch(`/reviews/${review_id}`, { inc_votes: inc }).then((res) => {
+    return res.data.review;
+  });
+};

@@ -131,11 +131,15 @@ gap: 1em;
   flex-direction: column;
   gap: 1em;
   text-align: left;
+  
 }
-.review-info>h3{
+.review-card-title{
+  flex-wrap: wrap;
+  margin: auto;
   font-family: 'Cinzel', serif;
   font-weight: 500;
   text-decoration: underline;
+  
  
 }
 #full-review{
@@ -189,6 +193,30 @@ gap: 1em;
 .comment-card-body{
   padding-left: 30px;
   padding-right: 30px;
+}
+.vote-widget{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.vote-widget-button-box{
+  display: flex;
+  gap: 1em;
+}
+.vote-widget-button{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-family: 'Cinzel', serif;
+  font-size: 2em;
+  font-weight: 900;
+  color: #000;
+  background-color: rgb(255, 255, 255,0.6);
+  border: 4px solid black;
+}
+.vote-widget-button:hover{
+  box-shadow: 0 0  5px inset;
+  background-color: white;
 }
 
 
