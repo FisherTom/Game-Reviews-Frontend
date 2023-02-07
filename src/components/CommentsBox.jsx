@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect} from 'react'
 import { getReviewComments } from '../utils/api'
 import CommentsBoxCard from './CommentsBoxCard'
 
-function CommentsBox({review}) {
-    const [comments, setComments] = useState([])
+function CommentsBox({review, comments, setComments}) {
+    
     
   useEffect(()=>{
     getReviewComments(review.review_id).then((comments) => { 
     return setComments(comments)})
-  },[review.review_id])
+  },[review.review_id, setComments])
     
   return (
     <section id='comments-box'>

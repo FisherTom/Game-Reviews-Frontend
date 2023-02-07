@@ -9,6 +9,7 @@ function Review() {
 
     const {review_id} = useParams()
     const [review, setReview] = useState({})
+    const [comments, setComments] = useState([])
 
     useEffect(()=>{
         getReviewById(review_id).then((res) => {
@@ -26,8 +27,8 @@ function Review() {
           <p className='full-review-body'>{review.review_body}</p>
           <p>Author: {review.owner}</p>
           <VoteWidget review={review} setReview={setReview}/>
-          <CommentsBox review={review}/>
-          <AddComment review_id={review.review_id}/>
+          <CommentsBox comments={comments} setComments={setComments} review={review}/>
+          <AddComment review_id={review_id} setComments={setComments}/>
       </section>
     )
   }else{
