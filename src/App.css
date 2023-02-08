@@ -29,7 +29,6 @@ img {
 .App {
   text-align: center;
   display: flex;
-
   flex-direction: column;
   align-items: center;
 }
@@ -58,7 +57,6 @@ img {
 #landing-splash>p{
   width: 70vw;
   margin: auto;
-  
   font-family: 'Cinzel', serif;
   font-size: 1.2em;
   font-weight: 300;
@@ -67,9 +65,8 @@ img {
 }
 
 #nav-bar{
-
   width: 100vw;
-  height: 3em;
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -91,6 +88,46 @@ img {
 .nav-link:hover{
   box-shadow: 3px 3px white;
 }
+#user-widget{
+  
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+.user-widget-name{
+  position: relative;
+  right: -45px;
+  font-family: 'Cinzel', serif;
+  font-size: 1em;
+  font-weight: 300;
+  color: white;
+  background-color: rgb(0, 0, 0);
+  padding:0.3em 3em 0.3em 1em  ;
+  
+  border-radius: 1em;
+}
+.user-widget-img{
+  position: relative;
+  right: 140px;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border: 5px solid black;
+  border-radius: 50%;
+}
+.user-widget-logout-button{
+  font-family: 'Cinzel', serif;
+  font-size: 1em;
+  font-weight: 300;
+  position: relative;
+  right: -20px;
+  padding:0.3em 1em 0.3em 2em  ;
+  background-color: #000;
+  color: white;
+  border-radius: 1em;
+  border: #000;
+  
+}
 #home-div{
  
 }
@@ -101,7 +138,6 @@ gap: 1em;
 }
 .review-card{
   width: 70vw;
-  min-width: 350px;
   padding: 1em;
   display: flex;
   align-items: center;
@@ -146,7 +182,7 @@ gap: 1em;
 #full-review{
   width: 70vw;
   max-width: 1000px;
-  min-width: 360px;
+  min-width: 300px;
   padding: 2em;
   display: flex;
   flex-direction: column;
@@ -230,6 +266,13 @@ gap: 1em;
   font-weight: 500;
   font-size: 1.2em;
 }
+.add-comment-error{
+  color: #000;
+  font-weight: 600;
+}
+.login-prompt{
+  margin: 1em;
+}
 
 .vote-widget{
   display: flex;
@@ -297,33 +340,6 @@ gap: 1em;
   font-weight: 500;
   color: rgb(241, 50, 50);
   text-shadow: 2px 2px black;
-}
-
-#user-widget{
-  position: absolute;
-  right: 2vw;
-  display: flex;
-  align-items: center;
-  gap: 1em;
-}
-.user-widget-name{
-  font-family: 'Cinzel', serif;
-  font-size: 1em;
-  font-weight: 300;
-  color: white;
-  background-color: rgb(0, 0, 0);
-  padding:0.3em 3em 0.3em 1em  ;
-  
-  border-radius: 1em;
-}
-.user-widget-img{
-  position: relative;
-  right: 50px;
-  width: 50px;
-  height: 50px;
-  object-fit: cover;
-  border: 5px solid black;
-  border-radius: 50%;
 }
 
 

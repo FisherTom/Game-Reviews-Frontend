@@ -3,8 +3,7 @@ import { useContext } from 'react';
 import { UserContext } from '../contexts/UserProvider'
 
 function UserWidget() {
-    const { loggedInUser } = useContext(UserContext);
-    console.log(loggedInUser);
+    const { loggedInUser,setLoggedInUser } = useContext(UserContext);
 
     if(Object.keys(loggedInUser).length === 0){
         return <></>
@@ -12,6 +11,7 @@ function UserWidget() {
     return (
         <div id='user-widget'>
             <p className='user-widget-name'>{loggedInUser.name}</p>
+            <button className='user-widget-logout-button' onClick={() => setLoggedInUser({})}>Log-out</button>
             <img className='user-widget-img' src={loggedInUser.avatar_url} alt="" />
         </div>
     )
