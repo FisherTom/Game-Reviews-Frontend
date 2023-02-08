@@ -15,7 +15,5 @@ function UserWidget() {
             <img className='user-widget-img' src={loggedInUser.avatar_url} alt="" />
         </div>
     )
-    }
-
-
+}
 export default UserWidget

@@ -18,8 +18,8 @@ function ReviewCard({review}) {
           <img className='review-owner-img' src={ownerImg} alt="" />
         </div>
       <section className='review-info'>
-        <h3 className='review-card-title'>{review.title}</h3>
-        <Link to={`/reviews/${review.review_id}`} className='review-link'>Full Review</Link>
+        <h3 className='review-info-title'>{review.title}</h3>
+        <Link className='review-link' to={`/reviews/${review.review_id}`}>Full Review</Link>
       </section>
     </li>
   )
