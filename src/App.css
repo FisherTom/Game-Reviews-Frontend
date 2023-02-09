@@ -1,25 +1,34 @@
-:root{
-  --one: #f47068ff;
-  --two: #ffb3aeff;
-  --three: #fff4f1ff;
-  --four: #1697a6ff;
-  --five: #0e606bff;
-  --six: #ffc24bff;
-  }
+.fancy-border {
+  border: 25px solid #b88846;
+  border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='75' height='75'%3E%3Cg fill='none' stroke='%23B88846' stroke-width='2'%3E%3Cpath d='M1 1h73v73H1z'/%3E%3Cpath d='M8 8h59v59H8z'/%3E%3Cpath d='M8 8h16v16H8zM51 8h16v16H51zM51 51h16v16H51zM8 51h16v16H8z'/%3E%3C/g%3E%3Cg fill='%23B88846'%3E%3Ccircle cx='16' cy='16' r='2'/%3E%3Ccircle cx='59' cy='16' r='2'/%3E%3Ccircle cx='59' cy='59' r='2'/%3E%3Ccircle cx='16' cy='59' r='2'/%3E%3C/g%3E%3C/svg%3E")
+    25;
+}
 
 html {
   box-sizing: border-box;
   font-size: 16px;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
   margin: 0;
   padding: 0;
   font-weight: normal;
 }
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 img {
@@ -27,46 +36,50 @@ img {
   height: auto;
 }
 .App {
+  min-height: 100vh;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#app-header{
-  
+#app-header {
 }
-#app-header>h1{
-  font-family: 'Cinzel', serif;
+#app-header > h1 {
+  margin: 0.2em;
+  font-family: "Cinzel", serif;
   font-weight: 900;
   font-size: 3em;
   color: ghostwhite;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 3px 3px #000;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000, 3px 3px #000;
 }
-#home-div{
+#home-div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#landing-splash{
-  background-color:rgb(0, 0, 0,0.5) ;
-  padding: 2em;
-  width: 100vw;
+#landing-splash {
+  margin-left: 1em;
+  margin-right: 1em;
+  background-color: rgb(0, 0, 0, 0.7);
+  padding: 1em;
+
   text-align: center;
   margin-bottom: 1em;
 }
-#landing-splash>p{
-  width: 70vw;
+#landing-splash > p {
   margin: auto;
-  font-family: 'Cinzel', serif;
+
   font-size: 1.2em;
+  line-height: 1.3;
   font-weight: 300;
   color: rgb(255, 255, 255);
   text-shadow: 1px 1px 20px black;
 }
 
-#nav-bar{
+#nav-bar {
   width: 100vw;
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,272 +87,105 @@ img {
   gap: 2em;
   margin-bottom: 1em;
 }
-.nav-link{
-  
-  font-family: 'Cinzel', serif;
+.nav-link {
+  font-family: "Cinzel", serif;
   font-size: 1em;
   font-weight: 500;
   text-decoration: none;
   color: white;
   background-color: rgb(0, 0, 0);
-  padding:0.3em 2em 0.3em 2em  ;
+  padding: 0.3em 2em 0.3em 2em;
   border-radius: 1em;
 }
-.nav-link:hover{
-  box-shadow: 3px 3px white;
+.nav-link:hover {
+  border: 2px solid rgb(204, 146, 52);
 }
-#user-widget{
-  
-  display: flex;
-  align-items: center;
-  gap: 1em;
-}
-.user-widget-name{
+#user-widget {
   position: relative;
-  right: -45px;
-  font-family: 'Cinzel', serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 20px;
+}
+.user-widget-name {
+  font-family: "Cinzel", serif;
   font-size: 1em;
   font-weight: 300;
   color: white;
   background-color: rgb(0, 0, 0);
-  padding:0.3em 3em 0.3em 1em  ;
-  
+  padding: 0.3em 2.5em 0.3em 1em;
+
   border-radius: 1em;
 }
-.user-widget-img{
-  position: relative;
-  right: 140px;
+.user-widget-img {
+  position: absolute;
+  right: 5px;
   width: 50px;
   height: 50px;
   object-fit: cover;
   border: 5px solid black;
   border-radius: 50%;
 }
-.user-widget-logout-button{
-  font-family: 'Cinzel', serif;
-  font-size: 1em;
-  font-weight: 300;
-  position: relative;
-  right: -20px;
-  padding:0.3em 1em 0.3em 2em  ;
-  background-color: #000;
+.user-widget-logout-button {
+  font-family: "Cinzel", serif;
+  font-size: 0.8em;
+  font-weight: 700;
+
+  padding: 0em 3em 0em 1em;
+  background-color: rgba(246, 0, 0, 0.4);
   color: white;
   border-radius: 1em;
   border: #000;
-  
 }
-#home-div{
- 
-}
-#review-list{
-display: flex;
-flex-direction: column;
-gap: 1em;
-}
-.review-card{
-  width: 70vw;
-  padding: 1em;
-  display: flex;
-  align-items: center;
-  gap: 1em;
-  flex-wrap: wrap;
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 2px solid rgb(0, 0, 0);
-  border-radius: 1em;
-}
-.review-card-img-box{
-}
-.review-card-img{
-  height: 150px;
-  width: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 5px 5px 20px black;
-}
-.review-owner-img{
-  position: relative;
-  top: 0px;
-  left: -40px;
-  height: 3em;
-  width: 3em;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid black;
-  background-color: white;
-  box-shadow: 5px 5px 20px black;
-}
-.review-info{
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  text-align: left;
-}
-.review-info>h3{
-  font-family: 'Cinzel', serif;
-  font-weight: 500;
-  text-decoration: underline;
-}
-#full-review{
-  width: 70vw;
-  max-width: 1000px;
-  min-width: 300px;
-  padding: 2em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgb(0, 0, 0,0.7);
-}
-#full-review>*{
-  margin: 0.5em;
-  font-family: 'Cinzel', serif;
-  color: white;
+#home-div {
 }
 
-#comments-box{
-}
-.comments-box-list{
-  display: flex;
-  flex-direction: column;
-  gap: 1.5em;
-  border-radius: 2em;
-  border: 1px solid black;
-  background-color: rgb(255, 255, 255, 0.6);
-  padding: 1em;
-}
-.comment-card{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  
-  background-color: rgb(0, 0, 0);
-  border: 1px solid black;
-  padding: 0.5em;
-  border-radius: 1em;
-  position: relative;
-}
-.comment-card-img{
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  object-fit: cover;
-  left: -10px;
-  top: -8px;
-  border-radius: 50%;
-  border: 5px solid black;
-
-}
-.comment-card-body{
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-#add-comment-box{
- 
-  padding: 1em;
-  
-  width: 97%;
-  background-color: rgb(255, 255, 255, 0.6);
-  border-radius: 2em;
-}
-.add-comment-form{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap-reverse;
-  gap: 1em;
-}
-.add-comment-input{
-  width: 70%;
- margin: auto;
-  padding: 0.5em;
-  padding-left: 1em;
-  border-radius: 1em;
-  background-color: #000;
-  color: white;
-  font-family: 'Cinzel', serif;
-}
-.add-comment-button{
-  padding-left: 1em;
-  padding-right: 1em;
-  border-radius: 2em;
-  border: 5px solid black;
-  font-family: 'Cinzel', serif;
-  font-weight: 500;
-  font-size: 1.2em;
-}
-.add-comment-error{
-  color: #000;
-  font-weight: 600;
-}
-.login-prompt{
-  margin: 1em;
-}
-
-.vote-widget{
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-.vote-widget-button-box{
-  display: flex;
-  gap: 1em;
-}
-.vote-widget-button{
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  font-family: 'Cinzel', serif;
-  font-size: 2em;
-  font-weight: 900;
-  color: #000;
-  background-color: rgb(255, 255, 255,0.6);
-  border: 4px solid black;
-}
-.vote-widget-button:hover{
-  box-shadow: 0 0  5px inset;
-  background-color: white;
-}
-
-#login{
+#login {
   display: flex;
   margin-top: 10vh;
   height: 90vh;
   align-items: flex-start;
 }
-.login-form{
+.login-form {
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2em;
   padding: 2em;
-  background-color: rgba(0, 0, 0, 0.6);
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0)
+  );
 }
-.login-form>input{
+.login-form > input {
   width: 60vw;
   max-width: 400px;
   padding: 1em;
   border-radius: 2em;
   margin: auto;
 }
-.login-form>label{
-  font-family: 'Cinzel', serif;
+.login-form > label {
+  font-family: "Cinzel", serif;
   font-size: 1.5em;
   font-weight: 500;
   color: white;
   text-shadow: 2px 2px black;
 }
-.login-button{
+.login-button {
   width: 60vw;
   padding: 1em;
   max-width: 200px;
   border-radius: 2em;
 }
-.login-error{
-  font-family: 'Cinzel', serif;
+.login-error {
+  font-family: "Cinzel", serif;
   font-size: 1.5em;
   font-weight: 500;
   color: rgb(241, 50, 50);
   text-shadow: 2px 2px black;
 }
-
-

@@ -6,7 +6,6 @@ function Home() {
   return (
     <div id='home-div'>
        <LandingSplash/>
-        <Reviews/>
     </div>
   )
 }

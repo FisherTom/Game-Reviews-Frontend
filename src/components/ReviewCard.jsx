@@ -12,14 +12,14 @@ function ReviewCard({review}) {
   }, [review.owner])
   
     return (
-      <li className='review-card'>
+      <li className='review-card '>
         <div className='review-card-img-box'>
           <img className='review-card-img' src={review.review_img_url} alt={"picture for review "+ review.title }></img>
           <img className='review-owner-img' src={ownerImg} alt="" />
         </div>
       <section className='review-info'>
-        <h3 className='review-card-title'>{review.title}</h3>
-        <Link to={`/reviews/${review.review_id}`} className='review-link'>Full Review</Link>
+        <h3 className='review-info-title'>{review.title}</h3>
+        <Link className='review-link' to={`/reviews/${review.review_id}`}>Full Review</Link>
       </section>
     </li>
   )

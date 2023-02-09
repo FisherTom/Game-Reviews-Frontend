@@ -1,4 +1,4 @@
-:root{
+:root {
   --one: #f47068ff;
   --two: #ffb3aeff;
   --three: #fff4f1ff;
@@ -6,26 +6,23 @@
   --five: #0e606bff;
   --six: #ffc24b;
   --seven: #8eb6ba;
-  }
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-#root{
-  background-image: url('../src/game-gdf5c3867e_1920.jpg');
+#root {
+  background-image: url("../src/game-gdf5c3867e_1920.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  
-
 }
