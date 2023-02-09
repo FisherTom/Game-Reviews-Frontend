@@ -4,11 +4,13 @@ const api = axios.create({
   baseURL: "https://game-reviews-k7fw.onrender.com/api",
 });
 
-export const getAllReviews = (category = "All") => {
-  let endpoint = "/reviews";
-  if (category !== "All") {
-    endpoint += `?category=${category}`;
+export const getAllReviews = (category = "", queries) => {
+  let endpoint = "/reviews?";
+  if (category !== "") {
+    endpoint += `category=${category}&`;
   }
+  endpoint += queries;
+
   console.log(endpoint);
   return api.get(endpoint).then((res) => {
     return res.data.reviews;
@@ -54,7 +56,7 @@ export const postComment = (review_id, username, body) => {
 };
 
 export const getAllCategories = () => {
-  return api.get("categories").then((res) => {
+  return api.get("/categories").then((res) => {
     return res.data.categories;
   });
 };
