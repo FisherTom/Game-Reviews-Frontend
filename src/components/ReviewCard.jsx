@@ -19,6 +19,11 @@ function ReviewCard({review}) {
         </div>
       <section className='review-info'>
         <h3 className='review-info-title'>{review.title}</h3>
+        <div>
+        <h4 className='review-card-votes'>Votes: {review.votes}</h4>
+        <h4 className='review-card-votes'>comments: {review.comment_count}</h4>
+        <h4 className='review-card-votes'>Date: {review.created_at}</h4>
+        </div>
         <Link className='review-link' to={`/reviews/${review.review_id}`}>Full Review</Link>
       </section>
     </li>
