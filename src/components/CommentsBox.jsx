@@ -1,6 +1,7 @@
 import React, { useEffect} from 'react'
 import { getReviewComments } from '../utils/api'
 import CommentsBoxCard from './CommentsBoxCard'
+import "../styles/Comments.css"
 
 function CommentsBox({review, comments, setComments}) {
     

@@ -12,7 +12,7 @@ function ReviewCard({review}) {
   }, [review.owner])
   
     return (
-      <li className='review-card'>
+      <li className='review-card '>
         <div className='review-card-img-box'>
           <img className='review-card-img' src={review.review_img_url} alt={"picture for review "+ review.title }></img>
           <img className='review-owner-img' src={ownerImg} alt="" />

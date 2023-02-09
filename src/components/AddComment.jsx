@@ -2,6 +2,7 @@ import React ,{useState, useContext} from 'react'
 import { postComment } from '../utils/api'
 import { UserContext } from '../contexts/UserProvider';
 import { Link } from 'react-router-dom';
+import "../styles/Comments.css"
 
 function AddComment({setComments, review_id}) {
   const { loggedInUser } = useContext(UserContext);

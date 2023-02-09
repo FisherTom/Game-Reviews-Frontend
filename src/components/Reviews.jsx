@@ -3,6 +3,7 @@ import { getAllReviews } from '../utils/api'
 import ReviewList from './ReviewList'
 import { getAllCategories } from '../utils/api'
 import { useNavigate, useParams } from 'react-router-dom'
+import "../styles/ReviewList.css"
 
 function Reviews() {
   const navigate = useNavigate();
