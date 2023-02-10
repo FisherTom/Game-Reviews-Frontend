@@ -4,6 +4,12 @@ const api = axios.create({
   baseURL: "https://game-reviews-k7fw.onrender.com/api",
 });
 
+export const getTopFive = () => {
+  return api.get("/reviews?sort_by=votes&order=DESC").then((res) => {
+    return res.data.reviews;
+  });
+};
+
 export const getAllReviews = (category = "", queries) => {
   let endpoint = "/reviews?";
   if (category !== "") {
@@ -11,7 +17,6 @@ export const getAllReviews = (category = "", queries) => {
   }
   endpoint += queries;
 
-  console.log(endpoint);
   return api.get(endpoint).then((res) => {
     return res.data.reviews;
   });
