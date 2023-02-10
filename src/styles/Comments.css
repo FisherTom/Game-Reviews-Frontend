@@ -34,6 +34,19 @@
   padding-left: 30px;
   padding-right: 30px;
 }
+.comment-delete-button {
+  font-size: 0.6em;
+  position: absolute;
+  right: 9px;
+  top: 9px;
+  padding: 0.3em;
+  border-radius: 50%;
+  border: #000;
+  background-color: rgb(255, 255, 255, 0.3);
+}
+.delete-error-msg {
+  color: rgb(222, 77, 77);
+}
 
 #add-comment-box {
   padding: 1em;

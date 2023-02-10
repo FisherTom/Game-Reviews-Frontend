@@ -60,3 +60,9 @@ export const getAllCategories = () => {
     return res.data.categories;
   });
 };
+
+export const deleteComment = (comment_id) => {
+  return api.delete(`/comments/${comment_id}`).then((res) => {
+    console.log(res);
+  });
+};

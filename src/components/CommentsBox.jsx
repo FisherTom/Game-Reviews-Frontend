@@ -16,7 +16,7 @@ function CommentsBox({review, comments, setComments}) {
         <h3>Comments:</h3>
         <ol className='comments-box-list'>
             {comments.length>0 ?  comments.map((comment) => {
-                return <CommentsBoxCard key={comment.comment_id} comment={comment}/>
+                return <CommentsBoxCard key={comment.comment_id} comment={comment} setComments={setComments}/>
             }):<li className='comment-card'><p className='comment-card-body'>no comments yet</p></li> }
         </ol>
     </section>
