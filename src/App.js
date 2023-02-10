@@ -6,6 +6,7 @@ import FullReview from "./components/FullReview";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Reviews from "./components/Reviews";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           element={<Reviews />}
         ></Route>
         <Route path="/login" element={<Login />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </main>
   );
