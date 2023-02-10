@@ -1,13 +1,14 @@
 #full-review {
   max-width: 1000px;
   margin: 1em;
-  padding: 1em;
+  padding: 2em;
   display: flex;
   flex-direction: column;
   gap: 1em;
   align-items: center;
   background-color: rgb(0, 0, 0, 0.7);
   color: white;
+  box-shadow: 0 0 20px black;
 }
 .full-review-title {
   font-family: "Cinzel", serif;

@@ -1,4 +1,5 @@
 #comments-box {
+  width: 100%;
 }
 .comments-box-list {
   display: flex;
@@ -49,21 +50,21 @@
 }
 
 #add-comment-box {
+  width: 100%;
+  max-width: 950px;
   padding: 1em;
-
-  width: 97%;
   background-color: rgb(255, 255, 255, 0.6);
   border-radius: 2em;
 }
 .add-comment-form {
   display: flex;
-  justify-content: center;
+
   flex-wrap: wrap-reverse;
   gap: 1em;
 }
 .add-comment-input {
-  width: 70%;
-  margin: auto;
+  flex-grow: 1;
+
   padding: 0.5em;
   padding-left: 1em;
   border-radius: 1em;
@@ -72,6 +73,8 @@
   font-family: "Cinzel", serif;
 }
 .add-comment-button {
+  flex-grow: 0.25;
+
   padding-left: 1em;
   padding-right: 1em;
   border-radius: 2em;
