@@ -4,8 +4,6 @@ import { useContext } from 'react';
 import { UserContext } from '../contexts/UserProvider'
 import { deleteComment } from '../utils/api';
 
-
-
 function CommentsBoxCard({comment, setComments}) {
   
   const { loggedInUser} = useContext(UserContext);
