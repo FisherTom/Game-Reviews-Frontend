@@ -165,6 +165,9 @@ img {
   color: white;
   text-shadow: 2px 2px black;
 }
+.login-form > p {
+  color: white;
+}
 .login-button {
   width: 60vw;
   padding: 1em;

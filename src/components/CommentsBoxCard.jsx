@@ -22,7 +22,7 @@ function CommentsBoxCard({comment, setComments}) {
     deleteComment(comment.comment_id)
     .then(() => {
       setComments((currentComments) => {
-        return currentComments.filter((filterComment) => filterComment != comment )
+        return currentComments.filter((filterComment) => filterComment !== comment )
       })
     })
     .catch(() => {
