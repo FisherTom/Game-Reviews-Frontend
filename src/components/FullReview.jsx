@@ -5,18 +5,27 @@ import { getReviewById } from '../utils/api'
 import VoteWidget from './VoteWidget'
 import AddComment from './AddComment'
 import "../styles/ReviewPage.css"
+import NotFound from './NotFound'
 
 function Review() {
 
     const {review_id} = useParams()
     const [review, setReview] = useState({})
     const [comments, setComments] = useState([])
+    const [error, setError] = useState('')
 
     useEffect(()=>{
         getReviewById(review_id).then((res) => {
+            setError('')
             setReview(res)
+        }).catch((err) => {
+          setError(err)
         })
     },[review_id])
+
+  if(error !== ''){
+    return <NotFound/>
+  }
 
   if(review.title){
     return (

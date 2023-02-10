@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { getAllReviews } from '../utils/api'
 import ReviewList from './ReviewList'
+import NotFound from './NotFound'
 import { getAllCategories } from '../utils/api'
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import "../styles/ReviewList.css"
@@ -13,10 +14,18 @@ function Reviews() {
   const [searchParams, setSearchParams] = useSearchParams()
   const [sort, setSort] = useState('created_at')
   const [order,setOrder] = useState('DESC')
+  const [error, setError] = useState('')
 
   useEffect(() => {
-    getAllReviews(category_name, searchParams).then((reviews) => setReviews(reviews))
     getAllCategories().then((categories) => setCategories(categories))
+    getAllReviews(category_name, searchParams)
+    .then((reviews) => {
+      setError('')
+      setReviews(reviews)
+    })
+    .catch((err) => {
+      setError(err)
+    })
   }, [category_name, searchParams])
 
   function handleSelectCategory(e){
@@ -36,6 +45,10 @@ function Reviews() {
   function handleOrder(e){
     setOrder(e.target.value)
     setSearchParams({sort_by: sort, order: e.target.value})
+  }
+
+  if(error !== ''){
+    return <NotFound/>
   }
 
   if(reviews.length > 0){

@@ -181,3 +181,13 @@ img {
   color: rgb(241, 50, 50);
   text-shadow: 2px 2px black;
 }
+.not-found {
+  font-family: "Cinzel", serif;
+  font-weight: 600;
+  background-color: rgb(0, 0, 0, 0.6);
+  color: white;
+  width: 98%;
+  margin-left: 1em;
+  margin-right: 1em;
+  max-width: 1000px;
+}
