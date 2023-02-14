@@ -8,9 +8,9 @@ This is a single page React app is a prototype of a games review stite in which 
 - post comments on reviews
 - delete previous comments
 
-### Link to Live demo: https://effortless-horse-91dc5b.netlify.app/
+#### Link to Live demo: https://effortless-horse-91dc5b.netlify.app/
 
-### Link to Back-end repo: https://github.com/FisherTom/Game-Review-API
+#### Link to Back-end repo: https://github.com/FisherTom/Game-Review-API
 
 ## Install instructions
 
