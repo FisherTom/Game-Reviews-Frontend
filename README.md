@@ -1,10 +1,16 @@
 # Game Review App Front-end
 
+This is a single page React app is a prototype of a games review stite in which users can :
+
+- log in / out
+- browse reviews by filtering by category / sorting by attributes
+- up / down vote reviews
+- post comments on reviews
+- delete previous comments
+
 ### Link to Live demo: https://effortless-horse-91dc5b.netlify.app/
 
 ### Link to Back-end repo: https://github.com/FisherTom/Game-Review-API
-
-This is a single page React app
 
 ## Install instructions
 
