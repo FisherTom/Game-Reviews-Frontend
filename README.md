@@ -10,6 +10,8 @@ This is a single page React app is a prototype of a games review stite in which 
 
 #### Link to Live demo: https://effortless-horse-91dc5b.netlify.app/
 
+(Please allow up to 10 seconds for the back-end to respond when first loading, the free hosting service takes a while to wake up)
+
 #### Link to Back-end repo: https://github.com/FisherTom/Game-Review-API
 
 ## Install instructions
